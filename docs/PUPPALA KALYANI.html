@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Puppala Kalyani | Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;600;700;900&display=swap"
+        rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
@@ -28,7 +31,11 @@
             --nav-height: 80px;
         }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
         html {
             scroll-behavior: smooth;
@@ -59,7 +66,12 @@
             transition: transform 0.15s ease, background 0.15s ease;
             mix-blend-mode: difference;
         }
-        .cursor.hover { transform: scale(2); background: var(--accent); }
+
+        .cursor.hover {
+            transform: scale(2);
+            background: var(--accent);
+        }
+
         .cursor-dot {
             width: 6px;
             height: 6px;
@@ -72,23 +84,56 @@
 
         /* ===== RESPONSIVE DESIGN ===== */
         @media (max-width: 1200px) {
-            .hero-grid { gap: 3rem; }
-            .hero-title { font-size: 3.5rem; }
-            .hero-img-container { max-width: 320px; }
+            .hero-grid {
+                gap: 3rem;
+            }
+
+            .hero-title {
+                font-size: 3.5rem;
+            }
+
+            .hero-img-container {
+                max-width: 320px;
+            }
         }
 
         @media (max-width: 1024px) {
-            .section-title { font-size: 2.5rem; }
-            .hero-title { font-size: 3rem; }
-            .hero-grid { gap: 2.5rem; }
-            .hero-img-container { max-width: 280px; }
+            .section-title {
+                font-size: 2.5rem;
+            }
+
+            .hero-title {
+                font-size: 3rem;
+            }
+
+            .hero-grid {
+                gap: 2.5rem;
+            }
+
+            .hero-img-container {
+                max-width: 280px;
+            }
         }
 
         @media (max-width: 768px) {
-            .cursor, .cursor-dot { display: none !important; }
-            body { cursor: auto !important; }
-            nav { padding: 0 1.5rem; height: var(--nav-height); background: rgba(5, 5, 8, 0.95) !important; backdrop-filter: blur(30px); border-bottom: 1px solid var(--border); }
-            
+
+            .cursor,
+            .cursor-dot {
+                display: none !important;
+            }
+
+            body {
+                cursor: auto !important;
+            }
+
+            nav {
+                padding: 0 1.5rem;
+                height: var(--nav-height);
+                background: rgba(5, 5, 8, 0.95) !important;
+                backdrop-filter: blur(30px);
+                border-bottom: 1px solid var(--border);
+            }
+
             .nav-links {
                 position: fixed;
                 top: var(--nav-height);
@@ -108,35 +153,100 @@
                 max-height: 80vh;
                 overflow-y: auto;
             }
-            .nav-links.active { transform: translateY(0); opacity: 1; visibility: visible; }
-            .nav-links a { width: 100%; padding: 1.1rem; border-radius: 12px; text-align: center; font-size: 1.15rem; border: 1px solid rgba(255, 255, 255, 0.05); }
-            .nav-links a:hover { border-color: var(--accent); background: rgba(99, 102, 241, 0.1); }
-            .menu-btn { display: flex !important; margin-left: auto; }
-            
-            section { 
-                padding: 5rem 1.5rem !important; 
-                width: 100% !important; 
-                margin: 0 !important; 
+
+            .nav-links.active {
+                transform: translateY(0);
+                opacity: 1;
+                visibility: visible;
+            }
+
+            .nav-links a {
+                width: 100%;
+                padding: 1.1rem;
+                border-radius: 12px;
+                text-align: center;
+                font-size: 1.15rem;
+                border: 1px solid rgba(255, 255, 255, 0.05);
+            }
+
+            .nav-links a:hover {
+                border-color: var(--accent);
+                background: rgba(99, 102, 241, 0.1);
+            }
+
+            .menu-btn {
+                display: flex !important;
+                margin-left: auto;
+            }
+
+            section {
+                padding: 5rem 1.5rem !important;
+                width: 100% !important;
+                margin: 0 !important;
                 overflow-x: hidden;
             }
-            .hero { padding-top: calc(var(--nav-height) + 2.5rem) !important; }
-            .hero-title { font-size: clamp(2.2rem, 8vw, 2.8rem); line-height: 1.1; margin-bottom: 1.5rem; }
-            .hero-subtitle { font-size: 1.05rem; padding: 0 0.5rem; }
-            .hero-img-container { width: min(260px, 70vw); height: auto; margin-bottom: 2rem; }
-            .grid-2, .grid-3, .personal-info-grid, .about-grid, .projects-grid, .skills-grid { 
-                grid-template-columns: 1fr; 
+
+            .hero {
+                padding-top: calc(var(--nav-height) + 2.5rem) !important;
+            }
+
+            .hero-title {
+                font-size: clamp(2.2rem, 8vw, 2.8rem);
+                line-height: 1.1;
+                margin-bottom: 1.5rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.05rem;
+                padding: 0 0.5rem;
+            }
+
+            .hero-img-container {
+                width: min(260px, 70vw);
+                height: auto;
+                margin-bottom: 2rem;
+            }
+
+            .grid-2,
+            .grid-3,
+            .personal-info-grid,
+            .about-grid,
+            .projects-grid,
+            .skills-grid {
+                grid-template-columns: 1fr;
                 gap: 2rem;
                 width: 100%;
             }
         }
 
         @media (max-width: 480px) {
-            .hero-title { font-size: 2.25rem; }
-            .hero-subtitle { font-size: 1.1rem; }
-            .section-title { font-size: 2rem; }
-            .stat-number { font-size: 2.5rem; }
-            .hero-btns { flex-direction: column; gap: 1rem; }
-            .btn { width: 100%; justify-content: center; padding: 0.75rem 1.5rem; font-size: 1rem; }
+            .hero-title {
+                font-size: 2.25rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.1rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .stat-number {
+                font-size: 2.5rem;
+            }
+
+            .hero-btns {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .btn {
+                width: 100%;
+                justify-content: center;
+                padding: 0.75rem 1.5rem;
+                font-size: 1rem;
+            }
         }
 
         /* ===== 3D BACKGROUND CANVAS ===== */
@@ -167,7 +277,9 @@
         }
 
         @media (max-width: 768px) {
-            nav { padding: 0 1.5rem !important; }
+            nav {
+                padding: 0 1.5rem !important;
+            }
         }
 
         .menu-btn {
@@ -201,9 +313,20 @@
             border-radius: 2px;
         }
 
-        .menu-btn.active span:nth-child(1) { transform: translateY(7px) rotate(45deg); width: 24px; }
-        .menu-btn.active span:nth-child(2) { opacity: 0; transform: translateX(-10px); }
-        .menu-btn.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); width: 24px; }
+        .menu-btn.active span:nth-child(1) {
+            transform: translateY(7px) rotate(45deg);
+            width: 24px;
+        }
+
+        .menu-btn.active span:nth-child(2) {
+            opacity: 0;
+            transform: translateX(-10px);
+        }
+
+        .menu-btn.active span:nth-child(3) {
+            transform: translateY(-7px) rotate(-45deg);
+            width: 24px;
+        }
 
         .nav-logo {
             font-weight: 800;
@@ -436,8 +559,17 @@
         }
 
         @keyframes pulse {
-            0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.6; }
-            50% { transform: translate(-50%, -50%) scale(1.2); opacity: 0.8; }
+
+            0%,
+            100% {
+                transform: translate(-50%, -50%) scale(1);
+                opacity: 0.6;
+            }
+
+            50% {
+                transform: translate(-50%, -50%) scale(1.2);
+                opacity: 0.8;
+            }
         }
 
         /* Floating orb */
@@ -453,12 +585,30 @@
             box-shadow: 0 0 40px var(--accent-glow);
         }
 
-        .orb-1 { top: 10%; right: 10%; animation-delay: 0s; }
-        .orb-2 { bottom: 20%; left: -10%; width: 40px; height: 40px; animation-delay: 2s; }
+        .orb-1 {
+            top: 10%;
+            right: 10%;
+            animation-delay: 0s;
+        }
+
+        .orb-2 {
+            bottom: 20%;
+            left: -10%;
+            width: 40px;
+            height: 40px;
+            animation-delay: 2s;
+        }
 
         @keyframes orbFloat {
-            0%, 100% { transform: translateY(0) scale(1); }
-            50% { transform: translateY(-20px) scale(1.1); }
+
+            0%,
+            100% {
+                transform: translateY(0) scale(1);
+            }
+
+            50% {
+                transform: translateY(-20px) scale(1.1);
+            }
         }
 
         /* ===== SECTIONS ===== */
@@ -581,7 +731,9 @@
             transition: opacity 0.4s ease;
         }
 
-        .project-card:hover::before { opacity: 1; }
+        .project-card:hover::before {
+            opacity: 1;
+        }
 
         .project-card:hover {
             border-color: rgba(99, 102, 241, 0.3);
@@ -675,10 +827,17 @@
             color: white;
         }
 
-        .exp-tab:hover:not(.active) { color: var(--text); }
+        .exp-tab:hover:not(.active) {
+            color: var(--text);
+        }
 
-        .exp-content { display: none; }
-        .exp-content.active { display: block; }
+        .exp-content {
+            display: none;
+        }
+
+        .exp-content.active {
+            display: block;
+        }
 
         .exp-list {
             display: flex;
@@ -704,7 +863,10 @@
             margin: 0 auto;
         }
 
-        .exp-left { text-align: right; }
+        .exp-left {
+            text-align: right;
+        }
+
         .exp-left h3 {
             font-size: 1.6rem;
             font-weight: 700;
@@ -776,7 +938,10 @@
             color: var(--accent-light);
         }
 
-        .progress-item { margin-bottom: 1.5rem; }
+        .progress-item {
+            margin-bottom: 1.5rem;
+        }
+
         .progress-header {
             display: flex;
             justify-content: space-between;
@@ -784,12 +949,14 @@
             font-weight: 500;
             font-size: 0.95rem;
         }
+
         .progress-bar {
             height: 8px;
             background: var(--border);
             border-radius: 10px;
             overflow: hidden;
         }
+
         .progress-fill {
             height: 100%;
             background: linear-gradient(90deg, var(--accent), var(--accent-light));
@@ -837,7 +1004,8 @@
             font-weight: 600;
         }
 
-        .contact-block p, .contact-block a {
+        .contact-block p,
+        .contact-block a {
             color: var(--text-dim);
             font-size: 1rem;
             text-decoration: none;
@@ -866,18 +1034,39 @@
 
         /* ===== LOADING ===== */
         .loading-screen {
-            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-            background: var(--bg); display: flex; flex-direction: column;
-            align-items: center; justify-content: center; z-index: 10000;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--bg);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            z-index: 10000;
             transition: opacity 0.8s ease, visibility 0.8s ease;
         }
-        .loading-screen.hidden { opacity: 0; visibility: hidden; }
+
+        .loading-screen.hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+
         .loader {
-            width: 60px; height: 60px; border: 3px solid rgba(99, 102, 241, 0.2);
-            border-top-color: var(--accent); border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            border: 3px solid rgba(99, 102, 241, 0.2);
+            border-top-color: var(--accent);
+            border-radius: 50%;
             animation: spin 1s linear infinite;
         }
-        @keyframes spin { to { transform: rotate(360deg); } }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
 
         /* ===== NAVIGATION PK BADGE ===== */
         .jb-badge {
@@ -927,10 +1116,10 @@
         .jb-badge-logo {
             font-weight: 900;
             font-size: 1.15rem;
-            background: linear-gradient(120deg, 
-                var(--accent) 30%, 
-                rgba(255,255,255,0.8) 50%, 
-                var(--accent) 70%);
+            background: linear-gradient(120deg,
+                    var(--accent) 30%,
+                    rgba(255, 255, 255, 0.8) 50%,
+                    var(--accent) 70%);
             background-size: 200% auto;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -940,18 +1129,37 @@
         }
 
         @keyframes logoShine {
-            to { background-position: 200% center; }
+            to {
+                background-position: 200% center;
+            }
         }
 
         @keyframes pulse {
-            0%, 100% { transform: scale(1); opacity: 1; filter: drop-shadow(0 0 2px var(--accent)); }
-            50% { transform: scale(1.08); opacity: 0.9; filter: drop-shadow(0 0 8px var(--accent)); }
+
+            0%,
+            100% {
+                transform: scale(1);
+                opacity: 1;
+                filter: drop-shadow(0 0 2px var(--accent));
+            }
+
+            50% {
+                transform: scale(1.08);
+                opacity: 0.9;
+                filter: drop-shadow(0 0 8px var(--accent));
+            }
         }
 
         @keyframes rotate {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
         }
+
         .scroll-progress {
             position: fixed;
             top: 0;
@@ -1002,11 +1210,23 @@
         }
 
         @keyframes iconFlicker {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.7; transform: scale(1.1) rotate(-15deg); }
-            80% { opacity: 1; transform: scale(1.3) rotate(15deg); }
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.7;
+                transform: scale(1.1) rotate(-15deg);
+            }
+
+            80% {
+                opacity: 1;
+                transform: scale(1.3) rotate(15deg);
+            }
         }
- 
+
         .social-sidebar a i {
             transition: all 0.3s ease;
         }
@@ -1039,7 +1259,7 @@
             border: 2px solid transparent;
             border-radius: 25px;
             background: linear-gradient(var(--bg), var(--bg)) padding-box,
-                        linear-gradient(135deg, var(--accent), var(--gold)) border-box;
+                linear-gradient(135deg, var(--accent), var(--gold)) border-box;
             z-index: -1;
             opacity: 0;
             transition: opacity 0.5s ease;
@@ -1051,8 +1271,13 @@
         }
 
         @keyframes rotateGlow {
-            0% { filter: hue-rotate(0deg); }
-            100% { filter: hue-rotate(360deg); }
+            0% {
+                filter: hue-rotate(0deg);
+            }
+
+            100% {
+                filter: hue-rotate(360deg);
+            }
         }
 
         /* Responsive Grids */
@@ -1068,14 +1293,17 @@
             .personal-info-grid {
                 grid-template-columns: 1fr;
             }
+
             section {
                 padding: 4rem 1.5rem;
             }
+
             .hero-img-container {
                 width: 280px;
                 height: 350px;
             }
         }
+
         /* ===== UTILITIES & SECTION TITLES ===== */
         .section-header {
             text-align: center;
@@ -1131,18 +1359,40 @@
         }
 
         @keyframes rgbGlow {
-            0% { background-position: 0% 50%; box-shadow: 0 0 15px #ff0000; }
-            20% { box-shadow: 0 0 15px #48ff00; }
-            40% { box-shadow: 0 0 15px #00ffd5; }
-            60% { box-shadow: 0 0 15px #002bff; }
-            80% { box-shadow: 0 0 15px #7a00ff; }
-            100% { background-position: 400% 50%; box-shadow: 0 0 15px #ff0000; }
+            0% {
+                background-position: 0% 50%;
+                box-shadow: 0 0 15px #ff0000;
+            }
+
+            20% {
+                box-shadow: 0 0 15px #48ff00;
+            }
+
+            40% {
+                box-shadow: 0 0 15px #00ffd5;
+            }
+
+            60% {
+                box-shadow: 0 0 15px #002bff;
+            }
+
+            80% {
+                box-shadow: 0 0 15px #7a00ff;
+            }
+
+            100% {
+                background-position: 400% 50%;
+                box-shadow: 0 0 15px #ff0000;
+            }
         }
 
         #chatbot-trigger::before {
             content: '';
             position: absolute;
-            top: -2px; left: -2px; right: -2px; bottom: -2px;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
             background: inherit;
             background-size: 400%;
             border-radius: 50%;
@@ -1152,8 +1402,8 @@
             animation: rgbGlow 8s linear infinite;
         }
 
-        #chatbot-trigger:hover { 
-            transform: scale(1.1) rotate(15deg); 
+        #chatbot-trigger:hover {
+            transform: scale(1.1) rotate(15deg);
             filter: brightness(1.2);
         }
 
@@ -1175,7 +1425,7 @@
             visibility: hidden;
             transform: translateY(30px) scale(0.9);
             transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
-            box-shadow: 0 25px 60px rgba(0,0,0,0.6), inset 0 0 20px rgba(99, 102, 241, 0.05);
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6), inset 0 0 20px rgba(99, 102, 241, 0.05);
         }
 
         #chat-window.active {
@@ -1222,8 +1472,15 @@
         }
 
         @keyframes msgSlide {
-            from { opacity: 0; transform: translateY(10px) scale(0.95); }
-            to { opacity: 1; transform: translateY(0) scale(1); }
+            from {
+                opacity: 0;
+                transform: translateY(10px) scale(0.95);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
         }
 
         .message.bot {
@@ -1258,9 +1515,17 @@
         }
 
         @keyframes avatarPulse {
-            0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
-            70% { box-shadow: 0 0 0 15px rgba(16, 185, 129, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+            0% {
+                box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+            }
+
+            70% {
+                box-shadow: 0 0 0 15px rgba(16, 185, 129, 0);
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+            }
         }
 
         .chat-chips {
@@ -1306,7 +1571,9 @@
             outline: none;
         }
 
-        .chat-input-area input:focus { border-color: var(--accent); }
+        .chat-input-area input:focus {
+            border-color: var(--accent);
+        }
 
         .chat-send-btn {
             background: var(--accent);
@@ -1322,7 +1589,10 @@
             transition: all 0.3s ease;
         }
 
-        .chat-send-btn:hover { background: var(--accent-light); transform: scale(1.1); }
+        .chat-send-btn:hover {
+            background: var(--accent-light);
+            transform: scale(1.1);
+        }
 
         .typing-indicator {
             display: flex;
@@ -1341,26 +1611,52 @@
             animation: typing 1.4s infinite;
         }
 
-        .typing-dot:nth-child(2) { animation-delay: 0.2s; }
-        .typing-dot:nth-child(3) { animation-delay: 0.4s; }
+        .typing-dot:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .typing-dot:nth-child(3) {
+            animation-delay: 0.4s;
+        }
 
         @keyframes typing {
-            0%, 60%, 100% { transform: translateY(0); }
-            30% { transform: translateY(-4px); }
+
+            0%,
+            60%,
+            100% {
+                transform: translateY(0);
+            }
+
+            30% {
+                transform: translateY(-4px);
+            }
         }
 
         @media (max-width: 768px) {
-            #chatbot-trigger { bottom: 20px; left: 20px; width: 55px; height: 55px; }
-            #chat-window { width: calc(100vw - 40px); left: 20px; bottom: 85px; height: 70vh; }
+            #chatbot-trigger {
+                bottom: 20px;
+                left: 20px;
+                width: 55px;
+                height: 55px;
+            }
+
+            #chat-window {
+                width: calc(100vw - 40px);
+                left: 20px;
+                bottom: 85px;
+                height: 70vh;
+            }
         }
     </style>
 </head>
+
 <body>
 
     <!-- Loading Screen -->
     <div class="loading-screen" id="loading-screen">
         <div class="loader"></div>
-        <div class="loading-text" style="margin-top: 1.5rem; color: var(--text-dim);">Designing Kalyani's Portfolio...</div>
+        <div class="loading-text" style="margin-top: 1.5rem; color: var(--text-dim);">Designing Kalyani's Portfolio...
+        </div>
     </div>
 
     <!-- Custom Cursor -->
@@ -1375,10 +1671,13 @@
 
     <!-- Social Sidebar -->
     <div class="social-sidebar">
-        <a href="https://www.linkedin.com/in/kalyani-puppala" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
-        <a href="https://github.com/puppalakalyani" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i data-lucide="github"></i></a>
+        <a href="https://www.linkedin.com/in/kalyani-puppala" target="_blank" rel="noopener noreferrer"
+            aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+        <a href="https://github.com/puppalakalyani" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i
+                data-lucide="github"></i></a>
         <a href="mailto:kalyanipuppala2007@gmail.com" aria-label="Email"><i data-lucide="mail"></i></a>
-        <a href="https://wa.me/918897373814" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i data-lucide="message-square"></i></a>
+        <a href="https://wa.me/918897373814" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i
+                data-lucide="message-square"></i></a>
     </div>
 
     <!-- Navigation -->
@@ -1386,10 +1685,11 @@
         <div class="jb-badge">
             <div class="jb-badge-circle">
                 <svg class="jb-badge-text" viewBox="0 0 100 100">
-                    <path id="circlePath" d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0" fill="transparent"/>
+                    <path id="circlePath" d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0"
+                        fill="transparent" />
                     <text fill="var(--accent-light)" font-size="8.5px" font-weight="700" letter-spacing="1.5px">
                         <textPath xlink:href="#circlePath">
-                            PK • PK • PK • PK • 
+                            PK • PK • PK • PK •
                         </textPath>
                     </text>
                 </svg>
@@ -1427,10 +1727,16 @@
                     Development
                 </h2>
                 <p class="hero-subtitle">
-                    Ambitious Software Developer skilled in <strong>Python</strong>, <strong>AWS Cloud Technologies</strong>, and <strong>Full-Stack Development</strong>. Proven ability to build modern, database-backed web applications and deploy scalable serverless architectures.
+                    Ambitious Software Developer skilled in <strong>Python</strong>, <strong>AWS Cloud
+                        Technologies</strong>, and <strong>Full-Stack Development</strong>. Proven ability to build
+                    modern, database-backed web applications and deploy scalable serverless architectures.
                 </p>
                 <div class="hero-btns">
-                    <a href="#contact" class="btn btn-primary">
+                    <a href="docs/cv.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                        <i data-lucide="file-text" style="width: 18px; height: 18px;"></i>
+                        Download CV
+                    </a>
+                    <a href="#contact" class="btn btn-outline">
                         <i data-lucide="mail" style="width: 18px; height: 18px;"></i>
                         Contact Me
                     </a>
@@ -1446,7 +1752,10 @@
                     <div class="hero-glow"></div>
                     <div class="floating-orb orb-1"></div>
                     <div class="floating-orb orb-2"></div>
-                    <img loading="lazy" src="https://avatars.githubusercontent.com/u/167460589?s=400&u=1bc0895474a6e1cc42b1f0c4aff673e15c2142e7&v=4" class="hero-img img-premium" alt="Puppala Kalyani" data-bs-toggle="modal" data-bs-target="#imageLightbox">
+                    <img loading="lazy"
+                        src="https://avatars.githubusercontent.com/u/167460589?s=400&u=1bc0895474a6e1cc42b1f0c4aff673e15c2142e7&v=4"
+                        class="hero-img img-premium" alt="Puppala Kalyani" data-bs-toggle="modal"
+                        data-bs-target="#imageLightbox">
                 </div>
             </div>
         </div>
@@ -1458,7 +1767,10 @@
             <div class="about-img-container img-container-premium">
                 <div class="img-glow-ring"></div>
                 <div class="hero-glow" style="width: 250px; height: 250px;"></div>
-                <img loading="lazy" src="https://avatars.githubusercontent.com/u/167460589?s=400&u=1bc0895474a6e1cc42b1f0c4aff673e15c2142e7&v=4" class="about-img img-premium" alt="Puppala Kalyani" data-bs-toggle="modal" data-bs-target="#imageLightbox">
+                <img loading="lazy"
+                    src="https://avatars.githubusercontent.com/u/167460589?s=400&u=1bc0895474a6e1cc42b1f0c4aff673e15c2142e7&v=4"
+                    class="about-img img-premium" alt="Puppala Kalyani" data-bs-toggle="modal"
+                    data-bs-target="#imageLightbox">
             </div>
             <div class="about-content">
                 <div class="section-label">About Me</div>
@@ -1467,10 +1779,14 @@
                     <span class="gradient">Through Code</span>
                 </h2>
                 <p>
-                    I am an ambitious technology professional specializing in full-stack web development and AWS cloud computing. With strong foundations in Python, JavaScript, and database systems, I design responsive frontends and secure backends.
+                    I am an ambitious technology professional specializing in full-stack web development and AWS cloud
+                    computing. With strong foundations in Python, JavaScript, and database systems, I design responsive
+                    frontends and secure backends.
                 </p>
                 <p>
-                    I have hands-on experience building web platforms and machine learning pipelines, deploying them serverless on AWS (Lambda, S3, RDS), and managing infrastructure using modern DevOps tools. I'm ready to contribute innovative solutions and grow professionally.
+                    I have hands-on experience building web platforms and machine learning pipelines, deploying them
+                    serverless on AWS (Lambda, S3, RDS), and managing infrastructure using modern DevOps tools. I'm
+                    ready to contribute innovative solutions and grow professionally.
                 </p>
                 <div style="display: flex; gap: 2rem; margin-top: 2rem; flex-wrap: wrap;">
                     <div>
@@ -1484,18 +1800,20 @@
                     <div>
                         <div style="font-size: 1.8rem; font-weight: 800; color: var(--accent);">80%</div>
                         <div style="color: var(--text-dim); font-size: 0.9rem; font-weight: 600;">B.Tech GPA</div>
-                        <div style="color: var(--text-muted); font-size: 0.8rem; margin-top: 0.1rem; line-height: 1.3;">Information Tech<br>SRKR College</div>
+                        <div style="color: var(--text-muted); font-size: 0.8rem; margin-top: 0.1rem; line-height: 1.3;">
+                            Information Tech<br>SRKR College</div>
                     </div>
                     <div>
                         <div style="font-size: 1.8rem; font-weight: 800; color: var(--accent);">83.42%</div>
                         <div style="color: var(--text-dim); font-size: 0.9rem; font-weight: 600;">Diploma Result</div>
-                        <div style="color: var(--text-muted); font-size: 0.8rem; margin-top: 0.1rem; line-height: 1.3;">AANM VVRSR<br>Polytechnic College</div>
+                        <div style="color: var(--text-muted); font-size: 0.8rem; margin-top: 0.1rem; line-height: 1.3;">
+                            AANM VVRSR<br>Polytechnic College</div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    
+
     <!-- Fun Facts Section -->
     <section id="facts" class="py-5" style="position: relative; z-index: 10;">
         <div class="container">
@@ -1544,11 +1862,24 @@
                     <i data-lucide="user-check" style="width: 20px; color: var(--accent);"></i> Academic Credentials
                 </h3>
                 <div style="display: grid; gap: 1rem;">
-                    <p style="font-size: 0.95rem; display: flex; align-items: center; gap: 0.8rem;"><i data-lucide="flag" style="width: 16px; color: var(--text-muted);"></i> <strong style="color: var(--text-dim); min-width: 120px;">Nationality:</strong> Indian</p>
-                    <p style="font-size: 0.95rem; display: flex; align-items: center; gap: 0.8rem;"><i data-lucide="user" style="width: 16px; color: var(--text-muted);"></i> <strong style="color: var(--text-dim); min-width: 120px;">Gender:</strong> Female</p>
-                    <p style="font-size: 0.95rem; display: flex; align-items: center; gap: 0.8rem;"><i data-lucide="graduation-cap" style="width: 16px; color: var(--text-muted);"></i> <strong style="color: var(--text-dim); min-width: 120px;">B.Tech GPA:</strong> 80 / 100 (IT, SRKR College)</p>
-                    <p style="font-size: 0.95rem; display: flex; align-items: center; gap: 0.8rem;"><i data-lucide="graduation-cap" style="width: 16px; color: var(--text-muted);"></i> <strong style="color: var(--text-dim); min-width: 120px;">Diploma:</strong> 83.42% (AANM VVRSR College)</p>
-                    <p style="font-size: 0.95rem; display: flex; align-items: center; gap: 0.8rem;"><i data-lucide="graduation-cap" style="width: 16px; color: var(--text-muted);"></i> <strong style="color: var(--text-dim); min-width: 120px;">SSC:</strong> 9.8 / 10.0 (St Johns School)</p>
+                    <p style="font-size: 0.95rem; display: flex; align-items: center; gap: 0.8rem;"><i
+                            data-lucide="flag" style="width: 16px; color: var(--text-muted);"></i> <strong
+                            style="color: var(--text-dim); min-width: 120px;">Nationality:</strong> Indian</p>
+                    <p style="font-size: 0.95rem; display: flex; align-items: center; gap: 0.8rem;"><i
+                            data-lucide="user" style="width: 16px; color: var(--text-muted);"></i> <strong
+                            style="color: var(--text-dim); min-width: 120px;">Gender:</strong> Female</p>
+                    <p style="font-size: 0.95rem; display: flex; align-items: center; gap: 0.8rem;"><i
+                            data-lucide="graduation-cap" style="width: 16px; color: var(--text-muted);"></i> <strong
+                            style="color: var(--text-dim); min-width: 120px;">B.Tech GPA:</strong> 80 / 100 (IT, SRKR
+                        College)</p>
+                    <p style="font-size: 0.95rem; display: flex; align-items: center; gap: 0.8rem;"><i
+                            data-lucide="graduation-cap" style="width: 16px; color: var(--text-muted);"></i> <strong
+                            style="color: var(--text-dim); min-width: 120px;">Diploma:</strong> 83.42% (AANM VVRSR
+                        College)</p>
+                    <p style="font-size: 0.95rem; display: flex; align-items: center; gap: 0.8rem;"><i
+                            data-lucide="graduation-cap" style="width: 16px; color: var(--text-muted);"></i> <strong
+                            style="color: var(--text-dim); min-width: 120px;">SSC:</strong> 9.8 / 10.0 (St Johns School)
+                    </p>
                 </div>
             </div>
             <div class="skill-card" style="padding: 2.5rem; border-left: 4px solid var(--gold);">
@@ -1556,23 +1887,37 @@
                     <i data-lucide="sparkles" style="width: 20px; color: var(--gold);"></i> Hobbies & Languages
                 </h3>
                 <div style="display: flex; flex-wrap: wrap; gap: 0.8rem;">
-                    <span style="background: rgba(245, 158, 11, 0.1); color: var(--gold); padding: 0.4rem 1rem; border-radius: 50px; font-size: 0.85rem; border: 1px solid rgba(245, 158, 11, 0.2);">Coding</span>
-                    <span style="background: rgba(245, 158, 11, 0.1); color: var(--gold); padding: 0.4rem 1rem; border-radius: 50px; font-size: 0.85rem; border: 1px solid rgba(245, 158, 11, 0.2);">Problem Solving</span>
-                    <span style="background: rgba(245, 158, 11, 0.1); color: var(--gold); padding: 0.4rem 1rem; border-radius: 50px; font-size: 0.85rem; border: 1px solid rgba(245, 158, 11, 0.2);">Data Visualization</span>
-                    <span style="background: rgba(245, 158, 11, 0.1); color: var(--gold); padding: 0.4rem 1rem; border-radius: 50px; font-size: 0.85rem; border: 1px solid rgba(245, 158, 11, 0.2);">Learning Tech</span>
+                    <span
+                        style="background: rgba(245, 158, 11, 0.1); color: var(--gold); padding: 0.4rem 1rem; border-radius: 50px; font-size: 0.85rem; border: 1px solid rgba(245, 158, 11, 0.2);">Coding</span>
+                    <span
+                        style="background: rgba(245, 158, 11, 0.1); color: var(--gold); padding: 0.4rem 1rem; border-radius: 50px; font-size: 0.85rem; border: 1px solid rgba(245, 158, 11, 0.2);">Problem
+                        Solving</span>
+                    <span
+                        style="background: rgba(245, 158, 11, 0.1); color: var(--gold); padding: 0.4rem 1rem; border-radius: 50px; font-size: 0.85rem; border: 1px solid rgba(245, 158, 11, 0.2);">Data
+                        Visualization</span>
+                    <span
+                        style="background: rgba(245, 158, 11, 0.1); color: var(--gold); padding: 0.4rem 1rem; border-radius: 50px; font-size: 0.85rem; border: 1px solid rgba(245, 158, 11, 0.2);">Learning
+                        Tech</span>
                 </div>
                 <div style="margin-top: 2rem;">
-                    <h4 style="font-size: 0.9rem; color: var(--text-dim); margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 1px;">Languages</h4>
+                    <h4
+                        style="font-size: 0.9rem; color: var(--text-dim); margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 1px;">
+                        Languages</h4>
                     <div style="display: grid; gap: 0.8rem;">
-                        <div style="display: flex; justify-content: space-between; font-size: 0.85rem;"><span>Telugu</span><span style="color: var(--accent-light);">Native</span></div>
-                        <div style="display: flex; justify-content: space-between; font-size: 0.85rem;"><span>English</span><span style="color: var(--accent-light);">Proficient</span></div>
+                        <div style="display: flex; justify-content: space-between; font-size: 0.85rem;">
+                            <span>Telugu</span><span style="color: var(--accent-light);">Native</span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; font-size: 0.85rem;">
+                            <span>English</span><span style="color: var(--accent-light);">Proficient</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
         <div style="margin-top: 1.5rem; max-width: 1200px; margin-left: auto; margin-right: auto;" class="skill-card">
             <div style="display: flex; align-items: center; gap: 1rem; padding: 1.5rem;">
-                <div style="background: rgba(99, 102, 241, 0.1); width: 60px; height: 60px; border-radius: 12px; display: flex; align-items: center; justify-content: center; border: 1px solid rgba(99, 102, 241, 0.2);">
+                <div
+                    style="background: rgba(99, 102, 241, 0.1); width: 60px; height: 60px; border-radius: 12px; display: flex; align-items: center; justify-content: center; border: 1px solid rgba(99, 102, 241, 0.2);">
                     <i data-lucide="map-pin" style="width: 28px; color: var(--accent);"></i>
                 </div>
                 <div>
@@ -1594,56 +1939,82 @@
                 <h3>Languages & Databases</h3>
                 <div class="progress-item">
                     <div class="progress-header"><span>Python</span><span>90%</span></div>
-                    <div class="progress-bar"><div class="progress-fill" style="width: 90%;"></div></div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 90%;"></div>
+                    </div>
                 </div>
                 <div class="progress-item">
                     <div class="progress-header"><span>JavaScript</span><span>85%</span></div>
-                    <div class="progress-bar"><div class="progress-fill" style="width: 85%;"></div></div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 85%;"></div>
+                    </div>
                 </div>
                 <div class="progress-item">
                     <div class="progress-header"><span>SQL / MySQL / MongoDB</span><span>85%</span></div>
-                    <div class="progress-bar"><div class="progress-fill" style="width: 85%;"></div></div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 85%;"></div>
+                    </div>
                 </div>
                 <div class="progress-item">
                     <div class="progress-header"><span>C Language</span><span>80%</span></div>
-                    <div class="progress-bar"><div class="progress-fill" style="width: 80%;"></div></div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 80%;"></div>
+                    </div>
                 </div>
                 <div class="progress-item">
                     <div class="progress-header"><span>Machine Learning Basics</span><span>75%</span></div>
-                    <div class="progress-bar"><div class="progress-fill" style="width: 75%;"></div></div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 75%;"></div>
+                    </div>
                 </div>
             </div>
             <div class="skill-card">
                 <h3>Web & Cloud Tech</h3>
                 <div class="progress-item">
                     <div class="progress-header"><span>React.js & Frontend Dev</span><span>85%</span></div>
-                    <div class="progress-bar"><div class="progress-fill" style="width: 85%;"></div></div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 85%;"></div>
+                    </div>
                 </div>
                 <div class="progress-item">
                     <div class="progress-header"><span>AWS (Lambda, S3, EC2, RDS, IAM)</span><span>85%</span></div>
-                    <div class="progress-bar"><div class="progress-fill" style="width: 85%;"></div></div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 85%;"></div>
+                    </div>
                 </div>
                 <div class="progress-item">
                     <div class="progress-header"><span>Node.js & Express.js (REST APIs)</span><span>80%</span></div>
-                    <div class="progress-bar"><div class="progress-fill" style="width: 80%;"></div></div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 80%;"></div>
+                    </div>
                 </div>
                 <div class="progress-item">
                     <div class="progress-header"><span>HTML5 / CSS3 / Bootstrap</span><span>90%</span></div>
-                    <div class="progress-bar"><div class="progress-fill" style="width: 90%;"></div></div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 90%;"></div>
+                    </div>
                 </div>
                 <div class="progress-item">
-                    <div class="progress-header"><span>DevOps (Git, GitHub, Postman, AWS CLI)</span><span>85%</span></div>
-                    <div class="progress-bar"><div class="progress-fill" style="width: 85%;"></div></div>
+                    <div class="progress-header"><span>DevOps (Git, GitHub, Postman, AWS CLI)</span><span>85%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 85%;"></div>
+                    </div>
                 </div>
             </div>
             <div class="skill-card">
                 <h3>Core Strengths</h3>
                 <ul class="project-features" style="display: grid; grid-template-columns: 1fr; gap: 1rem;">
-                    <li><strong style="color: var(--text);">Analytical Thinking</strong> - Identifying core bugs and performance issues.</li>
-                    <li><strong style="color: var(--text);">Problem-Solving</strong> - Designing algorithms and cloud workflows.</li>
-                    <li><strong style="color: var(--text);">Teamwork</strong> - Active collaboration in agile project squads.</li>
-                    <li><strong style="color: var(--text);">Adaptability</strong> - Quick onboarding on new frameworks and AWS SDKs.</li>
-                    <li><strong style="color: var(--text);">Cybersecurity Fundamentals</strong> - Basic security guidelines and IAM controls.</li>
+                    <li><strong style="color: var(--text);">Analytical Thinking</strong> - Identifying core bugs and
+                        performance issues.</li>
+                    <li><strong style="color: var(--text);">Problem-Solving</strong> - Designing algorithms and cloud
+                        workflows.</li>
+                    <li><strong style="color: var(--text);">Teamwork</strong> - Active collaboration in agile project
+                        squads.</li>
+                    <li><strong style="color: var(--text);">Adaptability</strong> - Quick onboarding on new frameworks
+                        and AWS SDKs.</li>
+                    <li><strong style="color: var(--text);">Cybersecurity Fundamentals</strong> - Basic security
+                        guidelines and IAM controls.</li>
                 </ul>
             </div>
         </div>
@@ -1667,7 +2038,8 @@
                 <h3>UPI Fraud Detection System</h3>
                 <div class="project-label">Technologies</div>
                 <p class="project-tech">Python | Scikit-learn | XGBoost | Flask | AWS Lambda</p>
-                <p style="color: var(--text-dim); font-size: 0.95rem;">An ML model built to detect fraudulent UPI transactions in real-time, achieving high precision scoring.</p>
+                <p style="color: var(--text-dim); font-size: 0.95rem;">An ML model built to detect fraudulent UPI
+                    transactions in real-time, achieving high precision scoring.</p>
                 <ul class="project-features">
                     <li>Achieved 96% precision using Scikit-learn and XGBoost architectures</li>
                     <li>Deployed serverless Flask API on AWS Lambda to ensure cost efficiency</li>
@@ -1683,7 +2055,8 @@
                 <h3>JobPortal Platform</h3>
                 <div class="project-label">Technologies</div>
                 <p class="project-tech">React.js | Node.js | Express.js | MongoDB | AWS S3 | JWT</p>
-                <p style="color: var(--text-dim); font-size: 0.95rem;">Responsive platform featuring role-based dashboards for job seekers and recruiters to apply/post listings.</p>
+                <p style="color: var(--text-dim); font-size: 0.95rem;">Responsive platform featuring role-based
+                    dashboards for job seekers and recruiters to apply/post listings.</p>
                 <ul class="project-features">
                     <li>Implemented secure JWT authentication and role-based access control</li>
                     <li>Configured resume uploads directly and securely to AWS S3 buckets</li>
@@ -1691,7 +2064,7 @@
                     <li>Crafted fully responsive user interfaces optimized for all screen sizes</li>
                 </ul>
             </div>
-             <div class="project-card">
+            <div class="project-card">
                 <div style="display: flex; justify-content: space-between; align-items: flex-start;">
                     <span class="project-number">03</span>
                     <span class="project-type">Serverless Translation Portal</span>
@@ -1699,7 +2072,8 @@
                 <h3>Amazon Translate & Polly Site</h3>
                 <div class="project-label">Technologies</div>
                 <p class="project-tech">Amazon Translate | Amazon Polly | AWS Lambda | HTML | CSS | JavaScript</p>
-                <p style="color: var(--text-dim); font-size: 0.95rem;">Multilingual translation web platform translating text and converting it to synthetic speech.</p>
+                <p style="color: var(--text-dim); font-size: 0.95rem;">Multilingual translation web platform translating
+                    text and converting it to synthetic speech.</p>
                 <ul class="project-features">
                     <li>Integrated Amazon Translate API for multilingual text translations</li>
                     <li>Leveraged Amazon Polly to convert translated text into realistic speech audio</li>
@@ -1720,29 +2094,35 @@
             <div class="row g-4">
                 <div class="col-md-4">
                     <div class="project-card h-100 service-hover">
-                        <div style="background: rgba(99, 102, 241, 0.1); width: 50px; height: 50px; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;">
+                        <div
+                            style="background: rgba(99, 102, 241, 0.1); width: 50px; height: 50px; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;">
                             <i data-lucide="layout" style="width: 24px; color: var(--accent);"></i>
                         </div>
                         <h3>Frontend Development</h3>
-                        <p style="color: var(--text-dim); font-size: 0.9rem;">Building beautiful, mobile-first, and highly interactive user interfaces using HTML5, CSS3, React.js, and Bootstrap.</p>
+                        <p style="color: var(--text-dim); font-size: 0.9rem;">Building beautiful, mobile-first, and
+                            highly interactive user interfaces using HTML5, CSS3, React.js, and Bootstrap.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="project-card h-100 service-hover">
-                        <div style="background: rgba(245, 158, 11, 0.1); width: 50px; height: 50px; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;">
+                        <div
+                            style="background: rgba(245, 158, 11, 0.1); width: 50px; height: 50px; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;">
                             <i data-lucide="server" style="width: 24px; color: var(--gold);"></i>
                         </div>
                         <h3>Backend & API Development</h3>
-                        <p style="color: var(--text-dim); font-size: 0.9rem;">Designing secure, structured REST APIs and serverless handlers using Node.js, Express, and Flask.</p>
+                        <p style="color: var(--text-dim); font-size: 0.9rem;">Designing secure, structured REST APIs and
+                            serverless handlers using Node.js, Express, and Flask.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="project-card h-100 service-hover">
-                        <div style="background: rgba(16, 185, 129, 0.1); width: 50px; height: 50px; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;">
+                        <div
+                            style="background: rgba(16, 185, 129, 0.1); width: 50px; height: 50px; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;">
                             <i data-lucide="cloud" style="width: 24px; color: #10b981;"></i>
                         </div>
                         <h3>AWS Integration & Databases</h3>
-                        <p style="color: var(--text-dim); font-size: 0.9rem;">Configuring serverless storage (S3), compute (Lambda), relational databases (RDS), and handling MongoDB/MySQL connections.</p>
+                        <p style="color: var(--text-dim); font-size: 0.9rem;">Configuring serverless storage (S3),
+                            compute (Lambda), relational databases (RDS), and handling MongoDB/MySQL connections.</p>
                     </div>
                 </div>
             </div>
@@ -1780,10 +2160,15 @@
                         <h3>Full Stack Developer Intern</h3>
                         <div class="exp-company">Amdox Technologies</div>
                     </div>
-                    <div class="exp-center"><div class="exp-dot"></div><div class="exp-line"></div></div>
+                    <div class="exp-center">
+                        <div class="exp-dot"></div>
+                        <div class="exp-line"></div>
+                    </div>
                     <div class="exp-right">
                         <div class="exp-date">Dec 2025<br>Apr 2026</div>
-                        <p>Developed a secure role-based admin dashboard designed to handle bulk student data uploads. Validated records on the backend, integrated JWT authentication and stored official certificates securely using AWS S3 buckets.</p>
+                        <p>Developed a secure role-based admin dashboard designed to handle bulk student data uploads.
+                            Validated records on the backend, integrated JWT authentication and stored official
+                            certificates securely using AWS S3 buckets.</p>
                     </div>
                 </div>
                 <div class="exp-item">
@@ -1791,10 +2176,15 @@
                         <h3>MERN Stack Developer Intern</h3>
                         <div class="exp-company">MERN Stack Project</div>
                     </div>
-                    <div class="exp-center"><div class="exp-dot"></div><div class="exp-line"></div></div>
+                    <div class="exp-center">
+                        <div class="exp-dot"></div>
+                        <div class="exp-line"></div>
+                    </div>
                     <div class="exp-right">
                         <div class="exp-date">June 2024</div>
-                        <p>Built a collaborative To-Do web app implementing MongoDB, Express.js, React.js, and Node.js. Handled real-time CRUD operations, API routes, and verified state persistence across user sessions.</p>
+                        <p>Built a collaborative To-Do web app implementing MongoDB, Express.js, React.js, and Node.js.
+                            Handled real-time CRUD operations, API routes, and verified state persistence across user
+                            sessions.</p>
                     </div>
                 </div>
             </div>
@@ -1807,11 +2197,15 @@
                         <h3>B.Tech in Information Technology</h3>
                         <div class="exp-company">SRKR Engineering College, Bhimavaram</div>
                     </div>
-                    <div class="exp-center"><div class="exp-dot"></div><div class="exp-line"></div></div>
+                    <div class="exp-center">
+                        <div class="exp-dot"></div>
+                        <div class="exp-line"></div>
+                    </div>
                     <div class="exp-right">
                         <div class="exp-date">2022<br>2025</div>
                         <p><strong>GPA: 80 / 100</strong><br>
-                        Specialized in Software Engineering, Database Systems, Computer Networks, and Full Stack Application Architectures.</p>
+                            Specialized in Software Engineering, Database Systems, Computer Networks, and Full Stack
+                            Application Architectures.</p>
                     </div>
                 </div>
                 <div class="exp-item">
@@ -1819,11 +2213,15 @@
                         <h3>Diploma in Engineering</h3>
                         <div class="exp-company">AANM VVRSR Polytechnic College, Gudlavalleru</div>
                     </div>
-                    <div class="exp-center"><div class="exp-dot"></div><div class="exp-line"></div></div>
+                    <div class="exp-center">
+                        <div class="exp-dot"></div>
+                        <div class="exp-line"></div>
+                    </div>
                     <div class="exp-right">
                         <div class="exp-date">2019<br>2022</div>
                         <p><strong>Percentage: 83.42%</strong><br>
-                        Acquired strong base in programming languages, computer systems, and troubleshooting methodologies.</p>
+                            Acquired strong base in programming languages, computer systems, and troubleshooting
+                            methodologies.</p>
                     </div>
                 </div>
                 <div class="exp-item">
@@ -1831,7 +2229,10 @@
                         <h3>Secondary School Certificate (SSC)</h3>
                         <div class="exp-company">St Johns English Medium High School, Bantumilli</div>
                     </div>
-                    <div class="exp-center"><div class="exp-dot"></div><div class="exp-line"></div></div>
+                    <div class="exp-center">
+                        <div class="exp-dot"></div>
+                        <div class="exp-line"></div>
+                    </div>
                     <div class="exp-right">
                         <div class="exp-date">2018<br>2019</div>
                         <p><strong>GPA Score: 9.8 / 10.0</strong><br>Completed with top-tier academic merit.</p>
@@ -1847,10 +2248,14 @@
                         <h3>AWS Academy Graduate ML Foundations</h3>
                         <div class="exp-company">AWS Training and Certification</div>
                     </div>
-                    <div class="exp-center"><div class="exp-dot"></div><div class="exp-line"></div></div>
+                    <div class="exp-center">
+                        <div class="exp-dot"></div>
+                        <div class="exp-line"></div>
+                    </div>
                     <div class="exp-right">
                         <div class="exp-date">Certificate</div>
-                        <p>Machine Learning Foundations Training Badge, validating knowledge of cloud machine learning frameworks, data ingestion, and model deployments.</p>
+                        <p>Machine Learning Foundations Training Badge, validating knowledge of cloud machine learning
+                            frameworks, data ingestion, and model deployments.</p>
                     </div>
                 </div>
                 <div class="exp-item">
@@ -1858,10 +2263,14 @@
                         <h3>Fundamentals of Cybersecurity</h3>
                         <div class="exp-company">Zscaler (EDU-102)</div>
                     </div>
-                    <div class="exp-center"><div class="exp-dot"></div><div class="exp-line"></div></div>
+                    <div class="exp-center">
+                        <div class="exp-dot"></div>
+                        <div class="exp-line"></div>
+                    </div>
                     <div class="exp-right">
                         <div class="exp-date">Certificate</div>
-                        <p>Course completion covering secure network boundary configurations, application security, threat landscapes, and standard protection measures.</p>
+                        <p>Course completion covering secure network boundary configurations, application security,
+                            threat landscapes, and standard protection measures.</p>
                     </div>
                 </div>
                 <div class="exp-item">
@@ -1869,10 +2278,14 @@
                         <h3>Networking Addressing & Troubleshooting</h3>
                         <div class="exp-company">Cisco</div>
                     </div>
-                    <div class="exp-center"><div class="exp-dot"></div><div class="exp-line"></div></div>
+                    <div class="exp-center">
+                        <div class="exp-dot"></div>
+                        <div class="exp-line"></div>
+                    </div>
                     <div class="exp-right">
                         <div class="exp-date">Certificate</div>
-                        <p>Focused on IP address allocations, network routing configurations, packet analysis, and core basic troubleshooting steps.</p>
+                        <p>Focused on IP address allocations, network routing configurations, packet analysis, and core
+                            basic troubleshooting steps.</p>
                     </div>
                 </div>
                 <div class="exp-item">
@@ -1880,10 +2293,14 @@
                         <h3>Python for Data Science</h3>
                         <div class="exp-company">Great Learning</div>
                     </div>
-                    <div class="exp-center"><div class="exp-dot"></div><div class="exp-line"></div></div>
+                    <div class="exp-center">
+                        <div class="exp-dot"></div>
+                        <div class="exp-line"></div>
+                    </div>
                     <div class="exp-right">
                         <div class="exp-date">Certificate</div>
-                        <p>Earned skills in data manipulation, plotting, statistical tests, and machine learning models using libraries like NumPy and Pandas.</p>
+                        <p>Earned skills in data manipulation, plotting, statistical tests, and machine learning models
+                            using libraries like NumPy and Pandas.</p>
                     </div>
                 </div>
             </div>
@@ -1895,8 +2312,9 @@
         <div class="contact-orb"></div>
         <div class="section-label">Get In Touch</div>
         <h2>Let's Create<br><span class="gradient">Something Great</span></h2>
-        <p style="max-width: 600px; margin: 0 auto 3rem; color: var(--text-dim);">Feel free to reach out for career opportunities, collaborations, or just a friendly hello!</p>
-        
+        <p style="max-width: 600px; margin: 0 auto 3rem; color: var(--text-dim);">Feel free to reach out for career
+            opportunities, collaborations, or just a friendly hello!</p>
+
         <div class="hero-btns" style="justify-content: center; margin-bottom: 4rem;">
             <a href="mailto:kalyanipuppala2007@gmail.com" class="btn btn-primary">
                 <i data-lucide="mail"></i> Email Me
@@ -1909,21 +2327,34 @@
         <div class="contact-grid">
             <div class="contact-block">
                 <h3>Contact Info</h3>
-                <a href="mailto:kalyanipuppala2007@gmail.com"><i data-lucide="mail" class="icon-effective" style="width: 18px; color: var(--accent);"></i> Email Me</a>
-                <a href="tel:+918897373814"><i data-lucide="phone" class="icon-effective" style="width: 18px; color: var(--accent);"></i> Call Me</a>
-                <p><i data-lucide="map-pin" class="icon-effective" style="width: 18px; color: var(--accent);"></i> Neelipudi, AP, India</p>
+                <a href="mailto:kalyanipuppala2007@gmail.com"><i data-lucide="mail" class="icon-effective"
+                        style="width: 18px; color: var(--accent);"></i> Email Me</a>
+                <a href="tel:+918897373814"><i data-lucide="phone" class="icon-effective"
+                        style="width: 18px; color: var(--accent);"></i> Call Me</a>
+                <p><i data-lucide="map-pin" class="icon-effective" style="width: 18px; color: var(--accent);"></i>
+                    Neelipudi, AP, India</p>
             </div>
             <div class="contact-block">
                 <h3>Socials</h3>
-                <a href="https://www.linkedin.com/in/kalyani-puppala" target="_blank" rel="noopener noreferrer"><i class="bi bi-linkedin icon-effective" style="font-size: 1.1rem; color: #0077b5;"></i> LinkedIn <i data-lucide="arrow-up-right" style="width: 14px;"></i></a>
-                <a href="https://github.com/puppalakalyani" target="_blank" rel="noopener noreferrer"><i class="bi bi-github icon-effective" style="font-size: 1.1rem; color: #ffffff;"></i> GitHub <i data-lucide="arrow-up-right" style="width: 14px;"></i></a>
+                <a href="https://www.linkedin.com/in/kalyani-puppala" target="_blank" rel="noopener noreferrer"><i
+                        class="bi bi-linkedin icon-effective" style="font-size: 1.1rem; color: #0077b5;"></i> LinkedIn
+                    <i data-lucide="arrow-up-right" style="width: 14px;"></i></a>
+                <a href="https://github.com/puppalakalyani" target="_blank" rel="noopener noreferrer"><i
+                        class="bi bi-github icon-effective" style="font-size: 1.1rem; color: #ffffff;"></i> GitHub <i
+                        data-lucide="arrow-up-right" style="width: 14px;"></i></a>
             </div>
             <div class="contact-block">
                 <h3>Quick Links</h3>
-                <a href="#about"><i data-lucide="user" class="icon-effective" style="width: 16px; color: var(--accent);"></i> About Me</a>
-                <a href="#projects"><i data-lucide="layers" class="icon-effective" style="width: 16px; color: var(--accent);"></i> My Projects</a>
-                <a href="#services"><i data-lucide="briefcase" class="icon-effective" style="width: 16px; color: var(--accent);"></i> My Services</a>
-                <a href="#home"><i data-lucide="home" class="icon-effective" style="width: 16px; color: var(--accent);"></i> Back to Home</a>
+                <a href="#about"><i data-lucide="user" class="icon-effective"
+                        style="width: 16px; color: var(--accent);"></i> About Me</a>
+                <a href="#projects"><i data-lucide="layers" class="icon-effective"
+                        style="width: 16px; color: var(--accent);"></i> My Projects</a>
+                <a href="#services"><i data-lucide="briefcase" class="icon-effective"
+                        style="width: 16px; color: var(--accent);"></i> My Services</a>
+                <a href="docs/cv.pdf" target="_blank" rel="noopener noreferrer"><i data-lucide="file-text"
+                        class="icon-effective" style="width: 16px; color: var(--accent);"></i> Download CV</a>
+                <a href="#home"><i data-lucide="home" class="icon-effective"
+                        style="width: 16px; color: var(--accent);"></i> Back to Home</a>
             </div>
         </div>
     </section>
@@ -1938,8 +2369,11 @@
         <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content bg-transparent border-0">
                 <div class="modal-body p-0 text-center">
-                    <img loading="lazy" src="https://avatars.githubusercontent.com/u/167460589?s=400&u=1bc0895474a6e1cc42b1f0c4aff673e15c2142e7&v=4" class="img-fluid rounded-4 shadow-lg border border-secondary" alt="Puppala Kalyani Full View">
-                    <button type="button" class="btn-close btn-close-white position-absolute top-0 end-0 m-3" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <img loading="lazy"
+                        src="https://avatars.githubusercontent.com/u/167460589?s=400&u=1bc0895474a6e1cc42b1f0c4aff673e15c2142e7&v=4"
+                        class="img-fluid rounded-4 shadow-lg border border-secondary" alt="Puppala Kalyani Full View">
+                    <button type="button" class="btn-close btn-close-white position-absolute top-0 end-0 m-3"
+                        data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
             </div>
         </div>
@@ -1952,20 +2386,23 @@
 
     <div id="chat-window">
         <div class="chat-header">
-            <img src="https://avatars.githubusercontent.com/u/167460589?s=400&u=1bc0895474a6e1cc42b1f0c4aff673e15c2142e7&v=4" alt="PK AI">
+            <img src="https://avatars.githubusercontent.com/u/167460589?s=400&u=1bc0895474a6e1cc42b1f0c4aff673e15c2142e7&v=4"
+                alt="PK AI">
             <div>
                 <div style="font-weight: 700; font-size: 0.95rem;">PK Assistant</div>
                 <div style="font-size: 0.75rem; color: #10b981; display: flex; align-items: center; gap: 4px;">
                     <span style="width: 6px; height: 6px; background: #10b981; border-radius: 50%;"></span> Online
                 </div>
             </div>
-            <button id="close-chat" style="margin-left: auto; background: transparent; border: none; color: var(--text-muted); cursor: pointer;">
+            <button id="close-chat"
+                style="margin-left: auto; background: transparent; border: none; color: var(--text-muted); cursor: pointer;">
                 <i data-lucide="x" style="width: 20px;"></i>
             </button>
         </div>
         <div class="chat-messages" id="chat-messages">
             <div class="message bot">
-                Hey there! 👋 I'm **PK Assistant**, Puppala Kalyani's AI agent. How can I help you explore her portfolio today?
+                Hey there! 👋 I'm **PK Assistant**, Puppala Kalyani's AI agent. How can I help you explore her portfolio
+                today?
             </div>
         </div>
         <div class="chat-chips" id="chat-chips">
@@ -1983,7 +2420,8 @@
     </div>
 
     <!-- Back to Top Button -->
-    <button id="back-to-top" class="btn btn-primary" style="position: fixed; bottom: 30px; right: 30px; border-radius: 50%; width: 50px; height: 50px; display: none; align-items: center; justify-content: center; z-index: 1000; box-shadow: 0 0 20px var(--accent-glow);">
+    <button id="back-to-top" class="btn btn-primary"
+        style="position: fixed; bottom: 30px; right: 30px; border-radius: 50%; width: 50px; height: 50px; display: none; align-items: center; justify-content: center; z-index: 1000; box-shadow: 0 0 20px var(--accent-glow);">
         <i data-lucide="arrow-up"></i>
     </button>
 
@@ -2084,7 +2522,7 @@
                 const x = e.clientX - rect.left - rect.width / 2;
                 const y = e.clientY - rect.top - rect.height / 2;
                 btn.style.transform = `translate(${x * 0.3}px, ${y * 0.3}px) scale(1.05)`;
-                if(btn.id === 'chatbot-trigger') {
+                if (btn.id === 'chatbot-trigger') {
                     btn.style.boxShadow = `0 0 40px var(--accent-glow)`;
                 }
             });
@@ -2121,7 +2559,7 @@
 
         chatTrigger.addEventListener('click', () => {
             chatWindow.classList.toggle('active');
-            if(chatWindow.classList.contains('active')) {
+            if (chatWindow.classList.contains('active')) {
                 chatTrigger.style.transform = 'scale(0) rotate(90deg)';
                 setTimeout(() => {
                     chatTrigger.innerHTML = '<i data-lucide="message-square"></i>';
@@ -2172,7 +2610,7 @@
                 typing.remove();
                 botAvatar.classList.remove('typing');
                 let response = responses.default;
-                
+
                 if (text.includes('hi') || text.includes('hello') || text.includes('hey')) response = responses.greeting;
                 else if (text.includes('skill') || text.includes('tech') || text.includes('know') || text.includes('stack')) response = responses.skills;
                 else if (text.includes('project') || text.includes('work') || text.includes('build')) response = responses.projects;
@@ -2181,7 +2619,7 @@
                 else if (text.includes('experience') || text.includes('intern') || text.includes('job') || text.includes('amdox')) response = responses.experience;
                 else if (text.includes('certif') || text.includes('badge') || text.includes('cisco') || text.includes('zscaler') || text.includes('aws')) response = responses.certifications;
                 else if (text.includes('thank')) response = responses.thanks;
-                
+
                 addMessage(response, 'bot');
             }, 800);
         }
@@ -2229,7 +2667,7 @@
         const particlesGeometry = new THREE.BufferGeometry();
         const particlesCount = window.innerWidth < 768 ? 500 : 1500; // Fewer particles on mobile
         const posArray = new Float32Array(particlesCount * 3);
-        for(let i = 0; i < particlesCount * 3; i++) { posArray[i] = (Math.random() - 0.5) * 60; }
+        for (let i = 0; i < particlesCount * 3; i++) { posArray[i] = (Math.random() - 0.5) * 60; }
         particlesGeometry.setAttribute('position', new THREE.BufferAttribute(posArray, 3));
         const particlesMaterial = new THREE.PointsMaterial({ size: 0.05, color: 0x818cf8, transparent: true, opacity: 0.4 });
         const particlesMesh = new THREE.Points(particlesGeometry, particlesMaterial);
@@ -2251,15 +2689,15 @@
         gsap.registerPlugin(ScrollTrigger);
         gsap.utils.toArray('section, .project-card, .skill-card, .exp-item').forEach((el) => {
             gsap.from(el, {
-                scrollTrigger: { 
-                    trigger: el, 
-                    start: 'top 90%', 
+                scrollTrigger: {
+                    trigger: el,
+                    start: 'top 90%',
                     toggleActions: 'play none none reverse',
-                    once: true 
+                    once: true
                 },
-                y: 30, 
-                opacity: 0, 
-                duration: 0.8, 
+                y: 30,
+                opacity: 0,
+                duration: 0.8,
                 ease: 'power2.out'
             });
         });
@@ -2272,4 +2710,5 @@
         });
     </script>
 </body>
+
 </html>
